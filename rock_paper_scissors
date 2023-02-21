@@ -1,0 +1,45 @@
+import random
+import time
+
+options = ['rock', 'paper', 'scissor']
+
+bot = random.choice(options)
+
+user_input = random.choice(options)
+
+while True:
+    if bot == ('rock'):
+        if user_input == ('rock'):
+            outcome = ('It is a Tie, go again!')
+        elif user_input == ('paper'):
+            outcome = ('You win! Paper covers rock!')
+        else:
+            user_input = ('scissor')
+            outcome = ('You lose! Rock smashes scissors')
+    if bot == ('paper'):
+        if user_input == ('rock'):
+            outcome = ('You lose! Paper covers rock!')
+        elif user_input == ('paper'):
+            outcome = ('It is a Tie, go again!')
+        else:
+            user_input = ('scissor')
+            outcome = ('You win! Scissors cut paper!')
+    if bot == ('scissor'):
+        if user_input == ('rock'):
+            outcome = ('You win! Rock smashes scissors!')
+        elif user_input == ('paper'):
+            outcome = ('You lose! Scissors cut paper!')
+        else:
+            user_input = ('scissor')
+            outcome = ('It is a Tie, go again!')
+    break
+
+print('Rock...')
+time.sleep(.6)
+print('Paper...')
+time.sleep(.7)
+print('Scissors...')
+time.sleep(.9)
+print('Shoot!')
+
+print(outcome)

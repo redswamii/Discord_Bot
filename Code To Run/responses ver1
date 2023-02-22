@@ -1,0 +1,129 @@
+import random
+
+def get_response(message: str) -> str:
+    p_message = message.lower()
+
+    if p_message == '!commands':
+        return (
+            'Command List:'
+            '\n`!commands` Show list of available commands.'
+            '\n`!help` Explains functions of bot.'
+            '\n`!hello` Bot replies to a greeting.'
+            '\n`!roll` '
+            '\n`!rps`')
+
+    if p_message == '!help':
+        return 'All commands should lead with a `!` Type `!commands` for a list of working commands.'
+
+    if p_message == '!hello':
+        return 'Hey there!'
+
+    if message == '!roll':
+        return str(random.randint(1, 2))
+
+    if p_message == '!rps':
+        return ("Type `!rock`,`!paper`,or `!scissor`")
+
+    if p_message == '!rock':
+        options = ['rock', 'paper', 'scissor']
+        cpu = random.choice(options)
+        user_input = 'rock'
+
+        while True:
+            if cpu == ('rock'):
+                if user_input == ('rock'):
+                    outcome = ('It is a tie, go again!')
+                elif user_input == ('paper'):
+                    outcome = ('You win! Paper covers rock!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('You lose! Rock smashes scissors')
+            if cpu  == ('paper'):
+                if user_input == ('rock'):
+                    outcome = ('You lose! Paper covers rock!')
+                elif user_input == ('paper'):
+                    outcome = ('It is a tie, go again!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('You win! Scissors cut paper!')
+            if cpu == ('scissor'):
+                if user_input == ('rock'):
+                    outcome = ('You win! Rock smashes scissors!')
+                elif user_input == ('paper'):
+                    outcome = ('You lose! Scissors cut paper!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('It is a tie, go again!')
+            break
+
+        return(outcome)
+
+    if p_message == '!paper':
+        options = ['rock', 'paper', 'scissor']
+        cpu = random.choice(options)
+        user_input = 'paper'
+
+        while True:
+            if cpu == ('rock'):
+                if user_input == ('rock'):
+                    outcome = ('It is a tie, go again!')
+                elif user_input == ('paper'):
+                    outcome = ('You win! Paper covers rock!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('You lose! Rock smashes scissors')
+            if cpu  == ('paper'):
+                if user_input == ('rock'):
+                    outcome = ('You lose! Paper covers rock!')
+                elif user_input == ('paper'):
+                    outcome = ('It is a tie, go again!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('You win! Scissors cut paper!')
+            if cpu == ('scissor'):
+                if user_input == ('rock'):
+                    outcome = ('You win! Rock smashes scissors!')
+                elif user_input == ('paper'):
+                    outcome = ('You lose! Scissors cut paper!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('It is a tie, go again!')
+            break
+
+        return(outcome)
+
+    if p_message == '!scissor':
+        options = ['rock', 'paper', 'scissor']
+        cpu = random.choice(options)
+        user_input = 'scissor'
+
+        while True:
+            if cpu == ('rock'):
+                if user_input == ('rock'):
+                    outcome = ('It is a tie, go again!')
+                elif user_input == ('paper'):
+                    outcome = ('You win! Paper covers rock!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('You lose! Rock smashes scissors')
+            if cpu  == ('paper'):
+                if user_input == ('rock'):
+                    outcome = ('You lose! Paper covers rock!')
+                elif user_input == ('paper'):
+                    outcome = ('It is a tie, go again!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('You win! Scissors cut paper!')
+            if cpu == ('scissor'):
+                if user_input == ('rock'):
+                    outcome = ('You win! Rock smashes scissors!')
+                elif user_input == ('paper'):
+                    outcome = ('You lose! Scissors cut paper!')
+                else:
+                    user_input = ('scissor')
+                    outcome = ('It is a tie, go again!')
+            break
+
+        return(outcome)
+
+    return 'I don\'t understand. Please type `!help` or `!commands`.'
